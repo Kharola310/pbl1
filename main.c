@@ -9,6 +9,8 @@ int main() {
 
     printf("Enter the source vertex: ");
     scanf("%d", &src);
+    if((map_no > 3)||(src < 0))
+        printf("INVALID INPUT");
 
     getgraph(map_no, src);
 
