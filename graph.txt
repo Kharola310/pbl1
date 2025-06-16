@@ -1,6 +1,12 @@
-
 # Graph 1
 5
+# Names
+Bus Stop
+Mall
+Library
+Gym
+Cinema
+# Matrix
 0 5 0 0 6
 5 0 2 0 0
 0 2 0 3 0
@@ -9,12 +15,20 @@
 
 # Graph 2
 3
+# Names
+A
+B
+C
+# Matrix
 0 1 1
 1 0 1
 1 1 0
 
 # Graph 3
 2
+# Names
+X
+Y
+# Matrix
 0 1
 1 0
-

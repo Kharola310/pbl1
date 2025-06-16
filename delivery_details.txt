@@ -1,0 +1,14 @@
+Delivery 1:
+  Map: Clementown
+  From: Bus Stop
+  To: Gym
+  Distance: 9
+  Description: Added a first delivery
+
+Delivery 2:
+  Map: Clementown
+  From: Bus Stop
+  To: Cinema
+  Distance: 6
+  Description: this is  my second discrintg
+
