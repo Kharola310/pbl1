@@ -11,24 +11,25 @@ int main() {
     char ch;
     char description[MAX_DESC];
 
-    printf("\n");
-    printf("================================================\n");
-    printf("   Welcome to Smart Delivery Route Planner\n");
-    printf("================================================\n");
+
 
     do {
-        printf("\n=== Main Menu ===\n");
-        printf("MAPS\n");
-        printf(" 1. Clementown\n");
-        printf(" 2. Clock Tower\n");
-        printf(" 3. XYZ City\n");
-        printf("DELIVERY DETAILS\n");
-        printf(" 4. Show all delivery details\n");
-        printf(" 5. Show the last delivery detail\n");
-        printf("Enter your choice (1-5): ");
 
+        printDivider();
+        printf("Smart Delivery Route Planner\n");
+        printDivider();
+        printf("\n");
+        printf("Main Menu\n");
+        printf("Maps:\n");
+        printf("  1. Clementown\n");
+        printf("  2. Clock Tower\n");
+        printf("  3. XYZ City\n");
+        printf("Delivery Details:\n");
+        printf("  4. Show all delivery details\n");
+        printf("  5. EXIT\n");
+        printf("Enter choice (1-5): ");
         if (scanf("%d", &choice) != 1 || choice < 1 || choice > 5) {
-            printf("Invalid input! Please enter a number between 1 and 5.\n");
+            printf("Invalid input! Please enter 1-5.\n\n");
             while (getchar() != '\n');
             continue;
         }
@@ -36,51 +37,59 @@ int main() {
         if (choice == 4) {
             displayAllDeliveryDetails();
             while (getchar() != '\n');
+            printf("\nContinue? (y/n): ");
+            ch = getchar();
+            printf("\n");
             continue;
         }
 
-        if (choice == 5) {
-            displayLastDeliveryDetail();
-            while (getchar() != '\n');
-            continue;
+        if(choice ==5){
+            break;
         }
+
 
         map_no = choice;
-        printf("\nSelected Map: %s\n",
+        printf("\n");
+        printDivider();
+        printf("Selected Map: %s\n",
                map_no == 1 ? "Clementown" : map_no == 2 ? "Clock Tower" : "XYZ City");
+        printDivider();
+        printf("\n");
 
-        printf("Enter the source vertex (starting location): ");
+        printf("Enter source vertex: ");
         if (scanf("%d", &src) != 1 || src < 0) {
-            printf("Invalid input! Source vertex must be a non-negative number.\n");
+            printf("Invalid input! Source must be non-negative.\n\n");
             while (getchar() != '\n');
             continue;
         }
 
-        printf("Enter the end vertex (destination location): ");
+        printf("Enter destination vertex: ");
         if (scanf("%d", &end) != 1 || end < 0) {
-            printf("Invalid input! End vertex must be a non-negative number.\n");
+            printf("Invalid input! Destination must be non-negative.\n\n");
             while (getchar() != '\n');
             continue;
         }
 
-        printf("Enter delivery description (up to %d characters): ", MAX_DESC - 1);
+        printf("Enter delivery description: ");
         while (getchar() != '\n'); // Clear buffer
         fgets(description, MAX_DESC, stdin);
         description[strcspn(description, "\n")] = 0; // Remove newline
         if (description[0] == '\0') {
-            printf("Description cannot be empty. Please try again.\n");
+            printf("Description cannot be empty.\n\n");
             continue;
         }
 
         getgraph(map_no, src, end, description);
 
-        printf("\nDo you want to continue? (y/n): ");
-        while (getchar() != '\n');
+        printf("\nContinue? (y/n): ");
+
+
         ch = getchar();
+        printf("\n");
     } while (ch == 'y' || ch == 'Y');
 
-    printf("\n================================================\n");
-    printf("   Thank you for using Smart Delivery Route Planner!\n");
-    printf("================================================\n");
+    printDivider();
+    printf("Thank you for using Smart Delivery Route Planner!\n");
+    printDivider();
     return 0;
 }

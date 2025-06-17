@@ -3,7 +3,7 @@
 
 void addDeliveryDetail(int map_no, int src, int end, int dist, char **names, char *description);
 void displayAllDeliveryDetails();
-void displayLastDeliveryDetail();
-int getDeliveryCount(); // Added prototype to avoid implicit declaration
+int getDeliveryCount();
+void printDivider(); // Added prototype for printDivider
 
 #endif
