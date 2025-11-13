@@ -1,6 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
-#include "Dijkstra.h"
+#include "project.h"
 
 void printPath(int parent[], int j, char **names) {
     if (parent[j] == -1) {
@@ -53,3 +53,5 @@ int DijkstrasAlgo(int V, int **graph, char **names, int src, int end, int *dist)
     printSolution(V, src, end, dist, parent, names);
     return dist[end];
 }
+
+

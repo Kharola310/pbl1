@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Dijkstra.h"
-#include "DeliveryDetails.h"
-
+#include "project.h"
 #define MAX_DESC 100
+void printf_map1();
 
 int main() {
     int map_no, src, end, choice;
@@ -55,6 +54,7 @@ int main() {
                map_no == 1 ? "Clementown" : map_no == 2 ? "Clock Tower" : "XYZ City");
         printDivider();
         printf("\n");
+        if(map_no == 1) printf_map1();
 
         printf("Enter source vertex: ");
         if (scanf("%d", &src) != 1 || src < 0) {
@@ -93,3 +93,5 @@ int main() {
     printDivider();
     return 0;
 }
+
+

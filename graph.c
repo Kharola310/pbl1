@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <limits.h> // Added for INT_MAX
-#include "Dijkstra.h"
-#include "DeliveryDetails.h"
+#include <limits.h>
+#include "project.h"
 
 #define MAX_LINE 100
 #define MAX_NAME 50
@@ -43,7 +42,7 @@ void getgraph(int map_no, int src, int end, char *description) {
         return;
     }
 
-    // Allocate memory for graph and names
+
     int **graph = (int **)malloc(size * sizeof(int *));
     char **names = (char **)malloc(size * sizeof(char *));
     for (int i = 0; i < size; i++) {
@@ -51,24 +50,24 @@ void getgraph(int map_no, int src, int end, char *description) {
         names[i] = (char *)malloc(MAX_NAME * sizeof(char));
     }
 
-    // Read until # Names
+
     while (fgets(line, sizeof(line), file)) {
         if (strncmp(line, "# Names", 7) == 0) break;
     }
 
-    // Read names
+
     for (int i = 0; i < size; i++) {
         fgets(line, sizeof(line), file);
-        line[strcspn(line, "\n")] = 0; // Remove newline
+        line[strcspn(line, "\n")] = 0;
         strcpy(names[i], line);
     }
 
-    // Read until # Matrix
+
     while (fgets(line, sizeof(line), file)) {
         if (strncmp(line, "# Matrix", 8) == 0) break;
     }
 
-    // Read matrix
+
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
             fscanf(file, "%d", &graph[i][j]);
@@ -77,16 +76,16 @@ void getgraph(int map_no, int src, int end, char *description) {
 
     fclose(file);
 
-    // Call Dijkstra's algorithm and get distance
+
     int dist[size];
     int final_dist = DijkstrasAlgo(size, graph, names, src, end, dist);
 
-    // Add delivery details if distance is valid
+
     if (final_dist != INT_MAX) {
         addDeliveryDetail(map_no, src, end, final_dist, names, description);
     }
 
-    // Free memory
+
     for (int i = 0; i < size; i++) {
         free(graph[i]);
         free(names[i]);
