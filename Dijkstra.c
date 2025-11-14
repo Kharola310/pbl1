@@ -1,5 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
+#include <windows.h>
 #include "project.h"
 
 void printPath(int parent[], int j, char **names) {
@@ -8,14 +9,24 @@ void printPath(int parent[], int j, char **names) {
         return;
     }
     printPath(parent, parent[j], names);
+    Sleep(1000);
     printf(" -> %s", names[j]);
 }
 
 void printSolution(int V, int start, int end, int dist[], int parent[], char **names) {
-    printf("Your path from start to final destination: \n");
-    printPath(parent, end, names);
     printf("\n");
-    printf("The total distance is: %d\n", dist[end]);
+    printf("Your path from start to final destination: \n");
+    printDivider();
+    printPath(parent, end, names);
+    Sleep(1000);
+    printf("\n");
+    printDivider();
+    printf("The total distance is: ");
+    Sleep(1000);
+    printf("%d km.\n", dist[end]);
+    printDivider();
+    Sleep(1000);
+    
 }
 
 int findminDistance(int V, int dist[], int included[]) {

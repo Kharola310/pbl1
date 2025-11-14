@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "project.h"
 
 #define MAX_DETAIL 200
@@ -24,7 +25,7 @@ void addDeliveryDetail(int map_no, int src, int end, int dist, char **names, cha
     fprintf(file, "  Description: %s\n", description);
     fprintf(file, "\n");
     fclose(file);
-    printf("Delivery details added successfully.\n\n");
+    printf("\nDelivery details added successfully.\n");
 }
 
 int getDeliveryCount() {
@@ -50,7 +51,7 @@ void displayAllDeliveryDetails() {
         printf("No delivery details available.\n\n");
         return;
     }
-
+    system("cls");
     printDivider();
     printf("All Delivery Details\n");
     printDivider();

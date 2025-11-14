@@ -13,7 +13,7 @@ int main() {
 
 
     do {
-
+        system("cls");
         printDivider();
         printf("Smart Delivery Route Planner\n");
         printDivider();
@@ -21,8 +21,8 @@ int main() {
         printf("Main Menu\n");
         printf("Maps:\n");
         printf("  1. Clementown\n");
-        printf("  2. Clock Tower\n");
-        printf("  3. XYZ City\n");
+        printf("  2. Paris\n");
+        printf("  3. Oslo\n");
         printf("Delivery Details:\n");
         printf("  4. Show all delivery details\n");
         printf("  5. EXIT\n");
@@ -55,6 +55,19 @@ int main() {
         printDivider();
         printf("\n");
         if(map_no == 1) printf_map1();
+        if(map_no == 2) printf_map2();
+        if(map_no == 3) printf_map3();
+
+        printf("Enter delivery description: ");
+        while (getchar() != '\n'); // Clear buffer
+        fgets(description, MAX_DESC, stdin);
+        description[strcspn(description, "\n")] = 0; // Remove newline
+        if (description[0] == '\0') {
+            printf("Description cannot be empty.\n\n");
+            continue;
+        }
+
+
 
         printf("Enter source vertex: ");
         if (scanf("%d", &src) != 1 || src < 0) {
@@ -69,18 +82,11 @@ int main() {
             while (getchar() != '\n');
             continue;
         }
-
-        printf("Enter delivery description: ");
-        while (getchar() != '\n'); // Clear buffer
-        fgets(description, MAX_DESC, stdin);
-        description[strcspn(description, "\n")] = 0; // Remove newline
-        if (description[0] == '\0') {
-            printf("Description cannot be empty.\n\n");
-            continue;
-        }
-
+        
         getgraph(map_no, src, end, description);
+        
 
+        while (getchar() != '\n');
         printf("\nContinue? (y/n): ");
 
 
