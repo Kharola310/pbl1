@@ -1,182 +1,21 @@
 Delivery 1
   Map: Clementown
-  From: Tokyo
-  To: Seoul
+  From: Seoul
+  To: Tokyo
   Distance: 20
-  Description: this si whqat
+  Description: 4
 
 Delivery 2
   Map: Clementown
-  From: Tokyo
-  To: Tokyo
-  Distance: 0
-  Description: dsladfjsdkjfkasdjkfjsdjf
+  From: Delhi
+  To: Jakarta
+  Distance: 110
+  Description: 1
 
 Delivery 3
   Map: Clementown
-  From: Tokyo
-  To: Tokyo
-  Distance: 0
-  Description: lasjkdfklsjdflkasjkfjlkajdswkfjlksdjaklfjksadjfjsdkljfksdjkf
-
-Delivery 4
-  Map: Clock Tower
-  From: C
-  To: C
-  Distance: 0
-  Description: blblba
-
-Delivery 5
-  Map: XYZ City
-  From: Y
-  To: Y
-  Distance: 0
-  Description: HAPPY
-
-Delivery 6
-  Map: Clementown
-  From: Beijing
-  To: Tokyo
-  Distance: 70
-  Description: hey man
-
-Delivery 7
-  Map: Clementown
-  From: Singapore
-  To: Beijing
-  Distance: 70
-  Description: jDA;D
-
-Delivery 8
-  Map: Clementown
-  From: Singapore
-  To: Beijing
-  Distance: 70
-  Description: hey my ri
-
-Delivery 9
-  Map: Clementown
-  From: Singapore
-  To: Delhi
-  Distance: 45
-  Description: sdfa
-
-Delivery 10
-  Map: Clementown
   From: Delhi
   To: Jakarta
   Distance: 110
-  Description: jkhkh
-
-Delivery 11
-  Map: Clementown
-  From: Singapore
-  To: Beijing
-  Distance: 70
-  Description: dagre
-
-Delivery 12
-  Map: Clock Tower
-  From: NewYork
-  To: Budapest
-  Distance: 47
-  Description: this is that
-
-Delivery 13
-  Map: Clock Tower
-  From: Paris
-  To: Rome
-  Distance: 8
-  Description: aksjdfklj
-
-Delivery 14
-  Map: Clementown
-  From: Beijing
-  To: Jakarta
-  Distance: 135
-  Description: this is my first deliver.
-
-Delivery 15
-  Map: Clock Tower
-  From: NewYork
-  To: Budapest
-  Distance: 47
-  Description:  Ž´Åü
-
-Delivery 16
-  Map: Clementown
-  From: Singapore
-  To: Seoul
-  Distance: 70
-  Description: first delivery
-
-Delivery 17
-  Map: Clementown
-  From: Tokyo
-  To: Jakarta
-  Distance: 155
-  Description: blblba
-
-Delivery 18
-  Map: Clementown
-  From: Bangkok
-  To: Singapore
-  Distance: 20
-  Description: 2
-
-Delivery 19
-  Map: XYZ City
-  From: Copenhagen
-  To: Zurich
-  Distance: 17
-  Description: 6
-
-Delivery 20
-  Map: Clementown
-  From: Mumbai
-  To: Delhi
-  Distance: 80
-  Description: 5
-
-Delivery 21
-  Map: Clock Tower
-  From: Rome
-  To: Prague
-  Distance: 17
-  Description: this is my first tirp
-
-Delivery 22
-  Map: Clementown
-  From: Delhi
-  To: Jakarta
-  Distance: 110
-  Description: this is our first delivery.
-
-Delivery 23
-  Map: Clock Tower
-  From: NewYork
-  To: Vienna
-  Distance: 42
-  Description: this is our second delivery.
-
-Delivery 24
-  Map: Clementown
-  From: Tokyo
-  To: Jakarta
-  Distance: 155
-  Description: test subject 
-
-Delivery 25
-  Map: Clock Tower
-  From: NewYork
-  To: Budapest
-  Distance: 47
-  Description: first delivery
-
-Delivery 26
-  Map: XYZ City
-  From: Oslo
-  To: Vienna
-  Distance: 46
-  Description: 0
+  Description: jfirstr fdeljrr
 

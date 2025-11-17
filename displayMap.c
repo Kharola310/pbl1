@@ -73,7 +73,7 @@ void printf_map2() {
 void printf_map3() {
     system("cls");
         printDivider();
-        printf("Oslo\n");
+        printf("XYZ city\n");
         printDivider();
         printf("\n");
     printf("                     0-Oslo-----------1-Stockholm\n");

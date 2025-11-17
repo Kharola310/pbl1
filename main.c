@@ -22,7 +22,7 @@ int main() {
         printf("Maps:\n");
         printf("  1. Clementown\n");
         printf("  2. Paris\n");
-        printf("  3. Oslo\n");
+        printf("  3. XYZ city\n");
         printf("Delivery Details:\n");
         printf("  4. Show all delivery details\n");
         printf("  5. EXIT\n");
@@ -69,14 +69,14 @@ int main() {
 
 
 
-        printf("Enter source vertex: ");
+        printf("Enter starting position: ");
         if (scanf("%d", &src) != 1 || src < 0) {
             printf("Invalid input! Source must be non-negative.\n\n");
             while (getchar() != '\n');
             continue;
         }
 
-        printf("Enter destination vertex: ");
+        printf("Enter the final position: ");
         if (scanf("%d", &end) != 1 || end < 0) {
             printf("Invalid input! Destination must be non-negative.\n\n");
             while (getchar() != '\n');

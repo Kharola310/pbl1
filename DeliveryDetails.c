@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "project.h"
+#include <windows.h>
 
 #define MAX_DETAIL 200
 
@@ -16,7 +17,7 @@ void addDeliveryDetail(int map_no, int src, int end, int dist, char **names, cha
         return;
     }
 
-    char *map_names[] = {"Clementown", "Clock Tower", "XYZ City"};
+    char *map_names[] = {"Clementown", "Paris", "XYZ City"};
     fprintf(file, "Delivery %d\n", getDeliveryCount() + 1);
     fprintf(file, "  Map: %s\n", map_names[map_no - 1]);
     fprintf(file, "  From: %s\n", names[src]);
@@ -25,7 +26,10 @@ void addDeliveryDetail(int map_no, int src, int end, int dist, char **names, cha
     fprintf(file, "  Description: %s\n", description);
     fprintf(file, "\n");
     fclose(file);
-    printf("\nDelivery details added successfully.\n");
+    printf("Delivery details added successfully.\n");
+    Sleep(1000);
+    printDivider();
+    printf("\n");
 }
 
 int getDeliveryCount() {
